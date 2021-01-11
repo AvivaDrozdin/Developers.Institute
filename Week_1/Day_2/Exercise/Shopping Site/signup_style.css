@@ -1,0 +1,117 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #E3E1E0;
+    font-family: spartan, Arial, Helvetica, sans-serif;
+}
+/* Navigation Style */
+.navigation {
+    height: 200px;
+    width: auto;
+    padding: 20px
+}
+
+span.logo {
+    position: relative;
+    left: 20px;
+    bottom: 50px;
+}
+
+span.pages {
+    float: right;
+    display: inline;
+}
+
+span.pages li {
+    display: inline;
+    list-style: none;
+    color: #6A5136;
+}
+
+/* Pages Style */
+
+li.collection {
+    position: relative;
+    right: 150px;
+    top: 35px;
+    font-weight: bold;
+}
+
+li.home {
+    position: relative;
+    right: 100px;
+    top: 35px;
+    font-weight: bold;
+}
+
+li.login{
+    position: relative;
+    right: 50px;
+    top: 35px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: underline solid 2px #EAC689;
+    color: #6A5136;
+    font-size: 30px;
+}
+div.format {
+    margin-top: 30px;
+}
+
+p {
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    left: 350px;
+    bottom: 15px
+}
+
+
+#email {
+    font-family: spartan, Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: relative;
+    left: 470px;
+    bottom: 20px;
+    margin-bottom: 10px;
+}
+
+#pass {
+    font-family: spartan, Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: relative;
+    left: 470px;
+    bottom: 20px;
+    margin-top: 10px;
+}
+
+#submit {
+    font-family: spartan, Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    background-color: #EAC689;
+    border: 2px solid #EAC689;
+    border-radius: 10px;
+    position: relative;
+    left: 500px;
+    bottom: 20px;
+    margin-top: 20px;
+}
+
+#reset {
+    font-family: spartan, Arial, Helvetica, sans-serif;
+    font-size: 2.1em;
+    background-color: #EAC689;
+    border: 2px solid #EAC689;
+    border-radius: 10px;
+    position: relative;
+    bottom: 83px;
+    left: 700px;
+    margin-top: 20px;
+}
+
