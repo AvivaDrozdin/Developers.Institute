@@ -1,0 +1,43 @@
+body{
+    background: url(flower.jpg);
+    background-size: cover;
+}
+
+h2 {
+    color: white;
+    font-family: "bungee outline";
+    font-size: 150%;
+    border: double 8px #FFDA85;
+    text-align: center;
+}
+
+
+
+p{
+    color: rebeccapurple;
+    line-height: 60px;
+    font-style: italic;
+    font-weight: 20%;
+    font-size: 100%;
+    font-family: Georgia, "Times New Roman", Times, serif, cursive;
+}
+
+img{
+    float: left;
+    border: solid 2px #be942fd7;
+}
+
+li{
+    color: #000000;
+    list-style-type: none;
+    display: inline;
+}
+
+#div1{
+    background-color: rgba(231, 176, 238, 0.795);
+    border: solid orange;
+}
+
+
+
+

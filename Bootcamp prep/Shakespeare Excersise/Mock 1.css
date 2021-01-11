@@ -1,0 +1,40 @@
+body {
+    width: 100%;
+    margin: 0px,20px;
+    text-align: center;
+}
+
+div, footer {
+    display: inline-block;
+    height: 100px;
+}
+
+.container {
+    margin: 20px, 0px;
+    width: 100%;
+}
+
+.right, .left, footer {
+    border: solid 3px black
+}
+
+.right {
+    width: 75%;
+    margin-top: 20px;;
+    margin-left: 10px;
+    background-color: pink;
+}
+
+.left {
+    width: 15%;
+    margin-top: 20px;
+    margin-right: 1px;
+    background-color: lightblue;
+}
+
+footer {
+    width: 91.5%;
+    margin-top: 20px;
+    background-color: palegoldenrod;
+
+}

@@ -1,0 +1,21 @@
+body {
+    width: auto;
+    height: auto;
+    margin: 0px, 40px;
+    background-color: #f0f0f0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    position: relative;
+    width: auto;
+    height: 400px;
+    background: url(seamist.jpg) no-repeat center;
+    background-size: cover;
+    
+}
+

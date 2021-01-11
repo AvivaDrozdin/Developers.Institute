@@ -1,0 +1,29 @@
+#wrap{
+    background-color: #3DC4FF;
+    margin: auto;
+}
+
+
+h1{
+    font-family: "times new roman";
+    font-size: 50px;
+}
+
+div{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+ul{
+    text-align: center;
+    margin: auto;
+    list-style: none;
+    line-height: 40px;
+    align-content: center;
+}
+
+
+li::first-letter{
+    font-size: 2em;
+}
+

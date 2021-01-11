@@ -1,0 +1,13 @@
+table{
+    border: solid black;
+    width: 500px;
+}
+
+th{
+    text-align: left;
+}
+
+table,th,tr,td{
+    border: solid black;
+    border-collapse: collapse;
+}
