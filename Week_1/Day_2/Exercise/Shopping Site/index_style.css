@@ -4,6 +4,7 @@ body {
     background-color: #E3E1E0;
     font-family: spartan, Arial, Helvetica, sans-serif;
 }
+
 /* Navigation Style */
 .navigation {
     height: 200px;
@@ -23,16 +24,18 @@ span.pages {
 }
 
 span.pages li {
-    display: inline;
+    display: inline-block;
+    margin-left: 10px;
+    left: 0px;
+    right: 30px;
     list-style: none;
     color: #6A5136;
 }
 
 /* paragraph */
 article {
-    position: relative;
-    left: 50px;
-    bottom: 20px;
+/* position: relative; THIS CAUSED THE PROBLEM!*/
+    margin-left: 50px;
     font-size: 20px;
     line-height: 30px;
 } 
@@ -53,7 +56,7 @@ li.login {
     font-weight: bold;
 }
 
-li.signup{
+li.about{
     position: relative;
     right: 50px;
     top: 35px;
@@ -224,4 +227,38 @@ span.img_rights {
     float: right;
     font-size: inherit;
 
+}
+
+
+/* media queries */
+@media all and (min-width: 768px) and (max-width: 1024px){
+    span.pages li{
+        display: inline-block;
+        /* text-align: center; */
+    }
+    
+ }
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    span.pages li{
+        display: block;
+        
+        /* text-align: center; */
+    }
+    article {
+            position: relative; 
+            top: 100px;
+            margin-left: 50px;
+            font-size: 20px;
+            line-height: 30px;
+        } 
+        
+
+ }
+
+@media all and (max-width: 480px) { 
+    span.pages li {
+        display: block;
+    
+    }
 }

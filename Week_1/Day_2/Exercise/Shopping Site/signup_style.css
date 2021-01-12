@@ -44,7 +44,7 @@ li.home {
     font-weight: bold;
 }
 
-li.login{
+li.about{
     position: relative;
     right: 50px;
     top: 35px;
@@ -56,22 +56,41 @@ nav a {
     color: #6A5136;
     font-size: 30px;
 }
-div.format {
-    margin-top: 30px;
-}
 
 p {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
-    position: relative;
-    left: 350px;
-    bottom: 15px
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
 }
 
+#f_name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: relative;
+    left: 470px;
+    bottom: 20px;
+    margin-bottom: 10px;
+}
+
+#l_name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: relative;
+    left: 470px;
+    bottom: 20px;
+    margin-bottom: 10px;
+}
 
 #email {
-    font-family: spartan, Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
     border: 2px solid white;
     border-radius: 10px;
     position: relative;
@@ -81,37 +100,42 @@ p {
 }
 
 #pass {
-    font-family: spartan, Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7em;
     border: 2px solid white;
     border-radius: 10px;
     position: relative;
     left: 470px;
-    bottom: 20px;
+    bottom: 25px;
     margin-top: 10px;
 }
 
 #submit {
     font-family: spartan, Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    font-size: 1.6em;
     background-color: #EAC689;
     border: 2px solid #EAC689;
     border-radius: 10px;
     position: relative;
-    left: 500px;
+    left: 570px;
     bottom: 20px;
     margin-top: 20px;
 }
 
-#reset {
-    font-family: spartan, Arial, Helvetica, sans-serif;
-    font-size: 2.1em;
-    background-color: #EAC689;
-    border: 2px solid #EAC689;
-    border-radius: 10px;
+
+/* footer edit */
+footer {
+    margin-top: 60px;
+}
+
+span.date {
     position: relative;
-    bottom: 83px;
-    left: 700px;
-    margin-top: 20px;
+    left: 20px;
+}
+
+span.img_rights {
+    float: right;
+    font-size: inherit;
+
 }
 

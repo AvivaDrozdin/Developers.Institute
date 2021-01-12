@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 3</title>
+    <style>
+
+        /* HOW TO ALIGN TEXT? */
+        .container {
+            height: 100px;
+            width: 1000px;
+            border: solid 2px coral;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .box_1 {
+            height: 50px;
+            flex: 1;
+            background-color: lightblue;
+            align-self: center; 
+            align-items: center;           
+        }
+
+        .box_2 {
+            height: 50px;
+            flex: 2;
+            background: coral;
+            align-self: center;
+            align-items: center;
+        }
+
+        .box_3 {
+            height: 50px;
+            flex: 2;
+            background-color: palegoldenrod;
+            align-self: center;
+            align-items: center;
+        }
+
+        .extra {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        /* div {
+            text-align: center;
+            line-height: 3;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box_1 extra">Logo</div>
+        <div class="box_2 extra">Team</div>
+        <div class="box_3 extra">Products</div>
+    </div>
+</body>
+</html>

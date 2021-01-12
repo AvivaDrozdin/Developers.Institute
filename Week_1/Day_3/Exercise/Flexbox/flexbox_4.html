@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 4</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 300px;
+        width: 100%;
+        border: solid red 2px;
+}
+.a,.b,.c {
+    background-color: coral;
+    text-align: center;
+    color: aliceblue;
+    font-size: 50px;
+}
+.a,.c {
+    height: 80px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+.b {
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    display: flex;}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="a">Logo</div>
+    <div class ="b">Team</div>
+    <div class="c">Products</div>
+    </div>
+</body>
+</html>
