@@ -1,0 +1,17 @@
+body {
+    font-family: "montserrat", Arial, Helvetica, sans-serif;
+    background-image: url(oneplus-7t-pro-3840x2160-abstract-4k-22188.jpeg) ;
+    background-size: cover;
+}
+
+
+.faded {
+    font-size: 3em;
+    letter-spacing: 20px;
+    font-weight: lighter;
+}
+
+header {
+    margin-top: 200px;
+    margin-bottom: 30px;
+}

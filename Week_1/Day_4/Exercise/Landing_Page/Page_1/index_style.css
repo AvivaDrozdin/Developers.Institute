@@ -4,6 +4,7 @@ body {
     
 }
 
+
 /* NAV */
 .nav {
     height: 10vh;
@@ -24,8 +25,12 @@ nav a {
 /* MAIN TEXT*/
 
 .main {
-    height: 45vh;
+    height: 50vh;
     margin-bottom: 10vh;
+}
+
+.features {
+    height: 50vh;
 }
 
 .about {
