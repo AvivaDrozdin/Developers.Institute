@@ -1,0 +1,35 @@
+.cont {
+    border: 3px solid blue;
+}
+
+.firstrow  {
+    border: red solid 2px;
+}
+
+.firstrow {
+    background-color: peachpuff;
+    border: solid 3px orange;
+}
+
+.one, .two {
+    border: green 3px solid;
+}
+
+
+
+/* .cont {
+    border: solid 1px black;
+}
+
+.nav {
+    border: solid 1px black;
+}
+
+.first{
+    border: solid 1px black;
+}
+
+.footer, .second {
+    border: solid 1px black;
+} */
+
