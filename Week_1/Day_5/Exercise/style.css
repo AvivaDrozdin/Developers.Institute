@@ -1,0 +1,14 @@
+
+
+.signin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+        /* align-content: flex-end;  */
+}
+
+.jumbo {
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    background: lightgrey;
+}
