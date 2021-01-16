@@ -1,0 +1,72 @@
+body {
+    margin: 0 auto;
+    font-family: "Baloo Chettan 2";
+}
+/* NAVBAR */
+.navbar-nav>li a {
+    text-transform: uppercase;
+}
+
+
+/* LOGO */
+img {
+    height: 12vh;
+    width: 12vh;
+    margin-right: 20px;
+}
+
+/* RESUME */
+.contactdetails>li {
+    list-style: none;
+}
+
+.resume .resume-title {
+    font-size: 3em;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #222222;
+  }
+
+.aviva {
+    font-weight: bold;
+    color: #ee0979
+}
+  
+.resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #ee0979;
+    position: relative;
+  }
+  
+.resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #ee0979;
+    margin-bottom: 10px;
+  }
+  
+.resume .resume-item h5 {
+    font-size: 16px;
+    background: #e3e3f1;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ee0979;
+  }
+  
+.resume .resume-item ul {
+    padding-left: 20px;
+  }
+  
+.resume .resume-item ul li {
+    padding-bottom: 10px;
+  }
+  
+.resume .resume-item:last-child {
+    padding-bottom: 0;
+  }

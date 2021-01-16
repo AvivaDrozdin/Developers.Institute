@@ -1,0 +1,49 @@
+body {
+    margin: 0 auto;
+    font-family: "Baloo Chettan 2";
+}
+
+/* LOGO */
+img {
+    height: 12vh;
+    width: 12vh;
+    margin-right: 20px;
+}
+
+/* NAVBAR */
+.navbar-nav>li a {
+    text-transform: uppercase;
+}
+
+/* HEADER TEXT EDIT */
+.btn-xl {
+    text-transform: uppercase;
+    padding: 1rem 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+}
+
+.aviva_inside {
+    color: #ee0979;
+    font-size: 1.5em;
+    font-family: "Baloo Chettan 2";
+ 
+
+}
+
+
+/* HEADER BACKGROUND */
+
+.masthead-content{
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(7rem + 72px);
+  padding-bottom: 7rem;
+  /* background: linear-gradient(0deg, #bbbbbb 50%, #212529 100%); */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+
