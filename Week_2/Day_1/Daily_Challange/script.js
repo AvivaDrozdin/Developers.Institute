@@ -9,6 +9,8 @@ let removedFirstAgain = fruits.shift(""); // Removes Apple from first position
 
 fruits.reverse(); // Reverses order of fruit
 
+let moreFruit = ["Banana", ["Apples", ["Oranges"],"Blueberries"]];
 
+console.log(moreFruit [1][1]); //moreFruit: First listed item in nisted = Apples index. First listed in next nisted = Orange [1] 
 
 
