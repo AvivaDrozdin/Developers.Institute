@@ -1,0 +1,72 @@
+body {
+    background: #F6F6F6;
+    padding-bottom: 30px;
+    padding-top: 30px;  
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 30px;
+}
+
+button {
+    height: 10vh;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+
+#container {
+    width: 60vh;
+    height: 80vh;
+    padding: 20px;
+    margin: 0 auto;
+    border: 2px solid #111;
+    border-radius: 5px;
+    background-color: #d6d6d6; 
+	
+
+}
+
+#display {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 60vh;
+    height: 14vh;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    background-color: white;
+
+
+
+}
+
+#keys {
+    display: grid;;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-gap: 15px;
+     
+}
+
+.reset {
+    grid-column: span 2;
+} 
+
+.reset, .back {
+    background-color: #DB5461;
+}
+
+
+
+.equal {
+    grid-column: span 3;
+    /* background-color: ; */
+}
+
+
+
+
+
+
+x is number beer 99
+
+y is subtracted value 

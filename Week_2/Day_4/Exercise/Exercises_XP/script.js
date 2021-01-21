@@ -4,7 +4,6 @@
 // Exercise 1
 
 // instruction (global variable)
-
 // let age = prompt("What is your age?"); // Non needed since we have it in function!!!!
 
 
@@ -25,6 +24,10 @@ function checkDriverAge(age){ // if () is empty - argument also empty. if (age) 
 
 
 
+
+
+
+
 //Exercise 2 
 
 // Given a total due and an array representing the amount of change in your pocket, determine whether or not you are able to pay for the item.
@@ -40,9 +43,10 @@ function checkDriverAge(age){ // if () is empty - argument also empty. if (age) 
 
 
 
+
+
+
 //Exercise 3
-
-
 //create function to find multiplies
 
 function multiples (){ //Exercise doesnt ask for parameter
@@ -98,7 +102,28 @@ sumNumbers()
 
 
 
-// Exercise 4: 
+
+
+// Exercise 4 
+let amazonBasket = {
+    glasses: 1,
+    books: 2,
+    floss: 100
+}
+// Create a function called checkBasket().
+function checkBasket() {
+
+
+// ask the user for the item he wants
+let itemRequest = glasses  //prompt("What item do you want?")
+// and let him know if it's in the basket or not
+// Hint: Use the in keyword inside the conditional
+  if itemRequest in amazonBasket
+    console.log(`You already have ${Object.amazonBasket[]} + ${amazonBasket} in your cart`)
+}
+
+
+
 
 
 
@@ -146,6 +171,12 @@ myBill();
 
 
 
+
+
+
 //Exercise 6; 
+
+
+
 
 

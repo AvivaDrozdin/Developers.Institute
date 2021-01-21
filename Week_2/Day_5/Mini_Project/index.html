@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div id="container">
+
+      <div id="wrapperer">
+
+        <div id="display" class="bar" type="number">0</div>
+
+        <div id="keys">
+
+          <button class="reset" type=“button” name=“button” onclick=“reset(‘reset’);“>C</button>
+
+          <button class="back" type=“button” name=“button” onclick=“backspace(‘backspace’);“>CE</button>
+          
+          <button type="button" name="button" onclick="my_f('/');">/</button>
+
+
+          <button type="button" name="button" onclick="my_f(7);">7</button>
+          <button type="button" name="button" onclick="my_f(8);">8</button>
+          <button type="button" name="button" onclick="my_f(9);">9</button>
+          <button type="button" name="button" onclick="my_f('*');">X</button>
+
+
+          <button type="button" name="button" onclick="my_f(4);">4</button>
+          <button type="button" name="button" onclick="my_f(5);">5</button>
+          <button type="button" name="button" onclick="my_f(6);">6</button>
+          <button type="button" name="button" onclick="my_f('-');">-</button>
+          
+
+
+
+          <button type="button" name="button" onclick="my_f(1);">1</button>
+          <button type="button" name="button" onclick="my_f(2);">2</button>
+          <button type="button" name="button" onclick="my_f(3);">3</button>
+          <button type="button" name="button" onclick="my_f('+');">+</button>
+
+          
+
+          <button type="button" name="button" onclick="my_f(0);">0</button>
+          <button class="equal" type="button" name="button" onclick="calculate();">=</button>
+
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>
