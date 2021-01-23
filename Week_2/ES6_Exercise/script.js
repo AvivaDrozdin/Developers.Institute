@@ -1,66 +1,35 @@
-// Exercise 1
+// // Exerecise_1
 
 var num = 8;
 var num = 10;
-console.log(num); 
-//expected outcome 10 / real outcome 10
-//explanation. second var was reassigned with 10
+console.log(num); // expected outcome 10 because last value overrides the previous one
 
 
-//Exercise 2 (???)
+
+// Exercise_2
+
 function numbers() {
-    for (var i = 0; i < 5; i++) {
-      console.log(i);
-    }
-      console.log(i);
-  }
-  numbers();
-  
-
-//Exercise 3
-//Which type of variable to use
-
-//1.Create a global variable that save the amount of money you have in your account 
-let myAccount = [200, 500, 1000, 50, 60, 190]
-
-function income (){
-    let income = []
-    for (number = 0; number <=500; number++){
-        myAccount.push(number)
-        return myAccount;
-    }
-}
-    
-function incomeSum () {
-    let total = income ()
-    let sum = 0
-    for (i = 0; i < total.length; i++){
-        sum += total[i]
-    } console.log(`The total on your account is ${sum}`)
-}
-
-incomeSum ()
-
-             
-
-
-//2. Create a variable that saves the amount of VAT
+let i; // variable added without definition = undefined outside loop
+ for (i = 0; i < 5; i++) {
+     console.log(i);
+ }
+     console.log(i);
+ }
+ numbers();
 
 
 
+//Exercise_3
 
+let myAccount = 10000;
+console.log(`Account before spendings: ${myAccount}`);
 
-//3. Create a variable that saves the amount of all the expenses and revenue you did /received for the past last month
+const vat = 0.19;
+let expenses = 2500;
+console.log(`Amount of expenses: ${expenses}. Tax is ${vat*100}%`);
 
+let vatAmount = expenses*vat;
 
-//4. Create a JS code that multiplies of the expenses by the VAT
+myAccount -= (expenses-vatAmount);
 
-
-
-//5. Create a JS code that changes the amount of the money you have in your account depending on your expenses/revenue.
-
-
-
-//6. Display it
-
-let 
+console.log(`Remaining after spendings: ${myAccount}`);
