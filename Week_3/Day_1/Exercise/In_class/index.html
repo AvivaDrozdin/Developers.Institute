@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Day 1 in class exercise</title>
+</head>
+<body>
+    <div>Users:</div>
+    <ul>
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+
+    <script src="script.js">
+        let bodyWebsite = document.body // access the body
+
+        let divWebsite = bodyWebsite.firstElementChild // access div 1 option
+       //let divWebsite = bodyWebsite.children[0] (Option 2)
+
+       let ulWebsite = bodyWebsite.lastElementChild // access UL  option 1
+       // let ulWebsite = bodyWebsite.children[1] (Option 2)
+
+       let liWebsite = ulWebsite.lastElementChild // access second li option 1
+       // let liWebsite = ulWebsite.children[1] // option (2)
+
+
+    </script>
+</body>
+</html>
