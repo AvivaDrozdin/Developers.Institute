@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 2 - In class Exercise</title>
+</head>
+<body>
+    <table id="sampleTable" border="1"> 
+    <tr>
+        <td>Row1 cell1</td> 
+        <td>Row1 cell2</td>
+    </tr> 
+    <tr>
+        <td>Row2 cell1</td> 
+        <td>Row2 cell2</td>
+    </tr> 
+    </table>
+        
+    <input type="button" onclick="insert_Row()" value="Insert row"> 
+
+    <button id="jsstyle">Style</button> 
+
+
+
+    <script>
+
+        // SHORT WAY! 
+        function insert_Row(){
+            let table = document.getElementById("sampleTable") // find table to work with
+            
+            //create empty <tr> element and add it to last position
+            let newRow = table.insertRow(1);
+
+
+            // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element    
+            let cell1 = row.inserCell(0);
+            let cell2 = row.insertCell(1);
+
+
+            // Add some text to the new cells:
+            cell1.innerHTML = "New Cell 1"
+            cell2.innerHTML = "New Cell 2"
+        }
+
+
+        // Exercise 2 
+        let button = document.getElementById("jsstyle")
+        button.addEventListener("click", style)
+
+        function style(event){
+            console.log("button:", event.target);
+            event.target.style.backgroundColor = "lightblue"
+            event.target.innerHTML = "I changed"
+            event.target.style.fontSize = "x-large";
+
+            
+        }
+
+
+    </script>
+</body>
+</html>

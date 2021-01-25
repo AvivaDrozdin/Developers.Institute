@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Day 3 - Gold Exercise 3</title>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script>
+        // Type what you need to buy on a text input field.
+        // Click on the “Add” button to add the item to your list.
+        // Click on the “Clear All” button to remove all items from the list.
+        // Click on the “Number of items” button to show the number of items in your list.
+        // The one and only element on the HTML file is :
+
+        //1. access root
+        let root = document.getElementById('root');
+
+        //2. create form
+        let form = document.createElement('form');
+        root.appendChild(form); //append form to the div
+
+        //3. create input
+        let input = document.createElement('input'); // create input
+        input.setAttribute('type', 'text'); // with type text
+        form.appendChild(input); //append input to form
+
+        // 4. create "add" button
+        let button = document.createElement('input'); // // create input ( NOTE: 'button' will not work)
+        button.setAttribute('type', 'submit'); // with type submit 
+        button.value = 'Add' // shown value = "add"
+        button.addEventListener('click', add); // add eventlistner when clicked to execute function Add
+        form.appendChild(button); // append button to form
+
+        // 5. add "clear all" button
+        let clearAll = document.createElement('input'); // create input ( NOTE: 'button' will not work)
+        clearAll.setAttribute('type', 'submit'); // with type submit
+        clearAll.value = 'Clear All' // shown value = "clear all"
+        clearAll.addEventListener('click', clear); //add eventlistner when clicked to execute function clear
+        form.appendChild(clearAll); // append to form
+
+        // 6. Create nr. items button
+        let itemNr = document.createElement('input');// // create input ( NOTE: 'button' will not work)
+        itemNr.setAttribute('type', 'submit'); //with type submit
+        itemNr.value = 'Number of Items' // shown value = "Nr of items"
+        itemNr.addEventListener('click', totalItem);//add eventlistner when clicked to execute function totalItems
+        form.appendChild(itemNr) // append to form
+
+        // 7. create functions
+
+        //add function
+        function add() {
+            event.preventDefault(); //stops page from reloading due to submit type
+            let para = document.createElement('p');
+            let item = document.createTextNode(input.value);
+            para.appendChild(item); // append text node to para - to display value in words
+            root.appendChild(para);
+            input.value = '';
+        }
+
+        // clear function
+        function clear(){
+            for (let i = 0; i < root.childElementCount; i++){
+                root.children[i].remove;
+            }
+        }
+
+        // totalItem function
+        function totalItem(event){
+            event.preventDefault(); //to prevent reloading
+            alert(`You have ${root.childElementCount} in your basket`)
+            // alert - NOT prompt (prompt asks for user input)
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

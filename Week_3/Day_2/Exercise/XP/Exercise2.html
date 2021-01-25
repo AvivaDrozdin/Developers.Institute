@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Day 2 XP Exercise 2</title>
+</head>
+<body>
+    <p><strong>Hello</strong> 
+        I hope you are enjoying 
+        <strong>this</strong> 
+        class. At the
+        <strong>end</strong>
+        you
+        <strong>will</strong> 
+        be great Developers!
+        <strong>Enjoy</strong> 
+        the 
+        <strong>JavaScript </strong> 
+        lessons</p>
+
+    <script>
+        // Create a function called : getBold_items() that takes no parameter. This function has to collect all the bold items inside the paragraph.
+        function getBold_items(){
+            let boldItems = document.getElementsByTagName('strong')
+            console.log(boldItems)
+            return boldItems;
+
+        }
+
+        //Create a function called : highlight() that changes the color of each bold item to blue.
+
+        function highlight(){
+            let blue = getBold_items();
+            for (let i = 0; i <blue.length; i++){
+                blue[i].style.color = 'blue';
+            }
+        }
+        highlight()
+
+        //Create a function called : return_normal() that changes the color of each bold item to black.
+
+        function return_normal(){
+            let returnBlack = getBold_items();
+            for (let i = 0; i < returnBlack.length; i++){
+                returnBlack[i].style.color = 'black';
+            }
+        }
+
+        //Call the function highlight() onMouseOver and the function return_normal() onMouseOut
+        document.addEventListener("mouseover", highlight);
+        document.addEventListener("mouseout", return_normal);
+
+
+
+    </script>    
+</body>
+</html>

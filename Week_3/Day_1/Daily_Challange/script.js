@@ -18,6 +18,8 @@ for (let i = 0; i < planets.length; i++) {
     document.body.appendChild(newDiv);
     let backgroundColor = document.getElementsByClassName("planet")[i].style.backgroundColor = colorList[i];
 
+
+    //Bonus
     let ml =120 //ml = margin left to push it off from left
     if (moons[i] != 0){
         for (let h =0; h <moons[i]; h++){

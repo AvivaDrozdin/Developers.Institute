@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Day 2 XP Exercise 1</title>
+</head>
+<body>
+    <article>
+        <h1> Some Facts </h1>
+        <h2> The Chocolate </h2>
+        <p> Chocolate is made from tropical Theobroma cacao tree seeds. 
+        Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
+        <p> After the European discovery of the Americas, chocolate became 
+        very popular in the wider world, and its demand exploded. </p>
+        <p> Chocolate has since become a popular food product that millions enjoy every day, 
+        thanks to its unique, rich, and sweet taste.</p> 
+        <p> But what effect does eating chocolate have on our health?</p> 
+    </article>
+    <form>
+        <label>What is your name?</label><input type="text" name="userName">
+        <label>What did you think of the article?</label><input type="text" name="questionToUser">
+    </form>
+
+    <script>
+        // retrieve the p
+        let paragraph = document.getElementsByTagName('p');
+        // give p class
+        for( let i =0; i <paragraph.length; i++){
+            paragraph[i].classList.add('para_article')
+        }
+        // remove last paragraph
+        let lastPara = document.body.firstElementChild.lastElementChild
+        lastPara.remove()  //remove the last child of first body element
+
+        //Add an event listener so that when you click on the h2, it is removed from the DOM.
+        let headerTwo = document.querySelector('h2')
+        headerTwo.addEventListener('click',removeHeader)
+
+        function removeHeader(event){
+            event.target.remove()
+        }
+
+        //Set the font size of the h1 to be a random pixel size from 0 to 100.
+        // COMMENTED OUT AS IT CAUSES OTHER CODE NOT TO WORK!
+
+        // let headerOne = document.body.firstElementChild.textContent
+        // function headerOne (){
+        //     for (i=0; i<=100; i++)
+        // }
+        // headerOne[i].style.fontSize = "x-large"
+
+        //Hide the 1st paragraph, when it’s clicked. (use the display property)
+        let firstPara = document.body.firstElementChild.children[2];// access first paragraph
+
+        firstPara.addEventListener('click', hide)
+        function hide(){
+            firstPara.style.display='none'
+        }
+
+        // // Get the values from the inputs and append them to the end of the html, inside a table.
+
+        //making the table & appending to body
+        let table = document.createElement('table')
+        let tableRow1 = document.createElement('tr')
+        let tableRow2 = document.createElement('tr')
+        table.style.border='2px solid black'
+        document.body.appendChild(table)
+
+        let form = document.forms[0]
+        let idea = form[1]
+        let name = form [0]
+        idea.addEventListener('change', addIdea)
+
+        function addIdea(){
+            tableRow2.innerHTML=idea.value
+        }
+
+        name.addEventListener('change', addName)
+        function addName(){
+            tableRow1.innerHTML=name.value
+        }
+
+        table.appendChild(tableRow1)
+        table.appendChild(tableRow2)
+
+    </script>
+</body>
+</html>

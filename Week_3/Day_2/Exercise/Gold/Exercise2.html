@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Day 2 - Gold Exercise 2</title>
+</head>
+<body>
+    <form>
+        <select id="colorSelect">
+            <option>Red</option>
+            <option>Green</option>
+            <option>White</option>
+            <option>Black</option>
+        </select>
+        <input type="button" value="Select and Remove"> 
+
+    <script>
+        // Create a function called : removecolor() that removes the selected color from the dropdown list.
+
+        //access form and add eventlistener to last element child
+        document.forms[0].lastElementChild.addEventListener('click', removecolor);
+
+        function removecolor(){
+            // access <select> by ID
+            let color = document.getElementById('colorSelect')
+                for (let i = 0; i < color.length; i++){
+                   
+                    if (color.children[i] == color.value){
+                        color.children[i].remove()
+                    }
+                }
+        }
+        removecolor()
+
+        //can't figure this one out, it doesn't remove the selected color
+
+
+    </script>
+</body>
+</html>
