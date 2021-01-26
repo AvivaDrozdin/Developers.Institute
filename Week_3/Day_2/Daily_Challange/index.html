@@ -21,19 +21,16 @@
     </p>
 
     <script>
-        //getting the values of each input:
-        function madLibs(){
-            let name = document.getElementById('person').value;
-            let adjective = document.getElementById('adjective').value;
-            let nout = document.getElementById('noun').value;
-            let storyDiv = document.getElementById('story')
-        }
-
         let libButton = document.getElementById('lib-button');
+            let name = document.getElementById('person');
+            let adjective = document.getElementById('adjective');
+            let noun = document.getElementById('noun');
+            let storyDiv = document.getElementById('story');
         let libIt = function() {
             let storyDiv = document.getElementById("story");
-            storyDiv.innerHTML = (`${person.value} walked to a ${adjective.value} ${noun.value}. End of Story!`)
+            storyDiv.innerHTML = (`${name.value} walked to a ${adjective.value} ${noun.value}. End of Story!`)
         };
+        
         libButton.addEventListener('click', libIt);
     </script>
 

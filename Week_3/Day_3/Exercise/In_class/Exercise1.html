@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM day 3 - Animation </title>
+    
+</head>
+<body>
+    <div id="banner"></div>
+
+    <script>
+
+        // I think I over complicating it
+
+        let timing = setInterval (alert, 1000)
+        let count = 10
+
+        function alert (){
+            let banner = document.getElementById('banner');
+            banner.innerHTML = `The Sale ends in ${count}sec!` 
+            count --
+
+            banner.style.backgroundColor = 'orange';
+            banner.style.fontSize = '50px'
+            banner.style.textAlign = 'center'
+
+            if (count == -1){
+                clearInterval(timing)
+            }
+        }
+
+
+    </script>
+</body>
+</html>

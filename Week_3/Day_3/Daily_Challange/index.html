@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Day 3 - Animation Daily Challange</title>
+</head>
+<body>
+    <form>
+        <label> Your Text here</label>
+        <input type="text" name="input" id="textInput">
+    </form>
+
+    <script>
+
+        function validate(){
+            let regex = /[A-Za-z]/;
+
+            let valid = regex.test(document.getElementById('textInput').value);
+
+            if (!valid){
+                alert("Only Letters allowed")
+            }
+
+            return valid;
+        }
+
+       
+
+
+        
+    
+
+        
+    </script>
+</body>
+</html>

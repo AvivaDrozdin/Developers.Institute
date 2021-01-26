@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Day 3 XP Exercise 1</title>
+    <style>
+        #container {
+          width: 400px;
+          height: 400px;
+          position: relative;
+          background: yellow;
+        }
+        #animate {
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          background-color: red;
+        }
+        </style>
+</head>
+<body>
+
+    <p><button onclick="myMove()">Click Me</button></p>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <script>
+    
+    //create function myMove - as seen above in onclick event (= starts an event when we click on it)
+    function myMove(){ 
+        //we retrieve the element that we want to animate
+        let square = document.getElementById('animate');
+        //we set it's position to 0
+        let pos = 0;
+        //set how fast the interval of adding px to achieve movement will be happening (5ms)
+        let inter = setInterval(movement,5);
+
+        //make a function of actual movement
+        function movement(){
+            // if position reaches 350px (400px of yellow box width - 50px of red box width)
+            if (pos == 350){
+                //stop the interval
+                clearInterval(inter)
+
+            } else { // else
+                pos++; //add a px to the position pushing FROM left to right each 5ms (=box moves from left to right)
+                square.style.left = pos + 'px';
+
+            }
+        }
+    }
+
+
+    </script>
+</body>
+</html>

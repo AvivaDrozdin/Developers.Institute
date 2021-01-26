@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Day 2 - GOLD Exercise 2</title>
+</head>
+<body>
+
+    <div class="container">
+        <p id="para">Hello World it's me, a paragraph</p>
+    </div>
+
+
+    <script>
+        let item = document.getElementById('para');
+        item.setAttribute('draggable', 'true');
+
+        item.addEventListener("dragstart", dragItem)
+        item.addEventListener("dragend", dropItem)
+
+
+        function dragItem(event){
+            console.log(event.clientX);
+        };
+
+        function dropItem(event){
+            let horizontal = event.clientX
+            let vertical = event.clientY
+            event.target.style.left = horizontal+'px'
+            event.target.style.top = vertical+'px'
+            event.target.style.position = 'absolute'
+            console.log(horizontal)
+        };
+
+    </script>
+</body>
+</html>
