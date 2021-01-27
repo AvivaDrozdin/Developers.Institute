@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Day 3 - Daily Challange re-do</title>
+</head>
+<body>
+    <form>
+        <label> Your Text here</label>
+        <input type="text" name="input" id="textInput">
+    </form>
+
+    <script>
+        // by Igors solution:
+
+
+        // create variable connected to input
+        let item = document.getElementById('textInput');
+
+        // create event with onkeyup (easier) that executes validation function
+        item.onkeyup = function validation (event) {
+            // create variable of the items value (the actual input)
+            let x = item.value;
+            //use keyCode to receive information about keystokes
+            let y = event.keyCode;
+            //use keycodes / charCode, that represent letters  (65 - 90 lowercase / 90-97 uppercase)
+            if (y < 65 || y > 122 || (y > 90 && y <97)) { 
+                //if the conditions is not met, slice last digit
+                item.value = x.slice(0, -1);
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
