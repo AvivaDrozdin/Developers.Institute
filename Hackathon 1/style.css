@@ -1,0 +1,65 @@
+body {
+    margin: 0 auto;
+    font-family: "Baloo Chettan 2";
+}
+
+/* LOGO */
+img {
+    height: 20vh;
+    width: 20vh;
+    margin-right: 20px;
+}
+
+/* NAVBAR */
+.navbar-nav>li a {
+    text-transform: uppercase;
+    color: gray;
+    font-size: 5vh;
+}
+
+.navbar {
+    height: 10vh;
+    padding: 3vh
+}
+
+.logo {
+    height: 20vh;
+    width: 20vh;
+}
+
+
+/* HEADER TEXT EDIT */
+
+.headtxt {
+    font-size: 10vh;
+}
+.headtxt2 {
+    font-size: 14vh;
+}
+
+/* HEADER BACKGROUND */
+
+.masthead-content{
+  position: relative;
+  overflow: hidden;
+  padding-top: 35vh;
+  padding-bottom: 35vh;
+  background-repeat: contain;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.img
+
+/* Sections */
+/* .products{
+    height: auto;
+    width: auto;
+} */
+
+.section {
+    height: 50px;
+    width: 50px;
+    border: 10px;
+}
