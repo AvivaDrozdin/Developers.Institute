@@ -24,14 +24,14 @@
 # bool(-5) # = true
 # bool(0) # = false
 # #WHY?
-# # Computers run on binery (0 & 1)
+# # Computers run on binary (0 & 1)
 # # no electricity = 0 electricity = 1
 # # Same with boolean
 # # if there is a value (5, -5, hello etc) is true
 # # if there is NO value (0 or empty sting) = false
 
 # otherName = 'mark'
-# len(otherName) # =4 - gives yout the length of an array
+# len(otherName) # =4 - gives your the length of an array
 
 
 # # How to get a variable into a sentance? e.g.
