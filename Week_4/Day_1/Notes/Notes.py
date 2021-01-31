@@ -87,4 +87,13 @@ else:
 
 
 
+elif len(sentence) < length:
+    print(f'The sentence was shorther than {length} characters')
+
+else: 
+    longest = len(sentence)
+    print(f'Well done! You sentence is {length} characters long')
+
+
+
 
