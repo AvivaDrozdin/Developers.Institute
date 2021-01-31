@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 - Daily Challange</title>
+    <style>
+        h1 {
+            /* margin-bottom: 30px; */
+        }
+        h2 {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        let x = [
+            [0, 0, 1, 1, 1, 0, 0],  // draw out pattern with nr
+            [0, 1, 0, 0, 0, 1, 0],
+            [0, 1, 0, 0, 0, 1, 0],
+            [0, 1, 1, 1, 1, 1, 0],
+            [0, 1, 0, 0, 0, 1, 0],
+            [0, 1, 0, 0, 0, 1, 0],
+            [0, 1, 0, 0, 0, 1, 0],
+        ];
+        let size = '20px 20px 20px 20px 20px 20px 20px';  //assign size to 7col/row (=0-6 index)
+        let div = document.createElement('div'); // each loop create new div
+        div.setAttribute('class', 'box'); //give each div a class
+        div.style.display = 'grid';  // display the divs in a grid style
+        div.style.gridTemplateColumns = size; //grid template columns = size (20px x7)
+        div.style.gridTemplateRows = size; // grid template rows = size (20px x7)
+        document.body.appendChild(div); // append divs to the body
+
+        for (let i = 0; i < 7; i++) { //each loop i gains 1 until loop reaches 7 (because of 7 rows/columns)
+            for (let e = 0; e < 7; e++) { // nested loop that gains 1 until loop reaches 7
+                let para = document.createElement('p');  //during the nested loop create paragraphs
+                para.style.fontSize = '10px'; // p = size of 10px
+                para.style.textAlign = 'center'; //allign para central
+                if (x[i][e] == 1) { //if x number of i & e equals to 1
+                    para.appendChild(document.createTextNode('*')); // create textnode inside para of *
+                }
+                div.appendChild(para); //append divs to para
+            }
+        }
+
+    </script>
+    </script>
+</body>
+</html>

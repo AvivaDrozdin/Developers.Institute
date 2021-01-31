@@ -1,11 +1,5 @@
-// STEP 1) create Sidebar clear button & divs (21)
-// access container & sidebar div
-// let sidebar = document.getElementById('sidebar') 
-
-
 let sidebar = document.getElementById('sidebar')
 //console.log(sidebar);
-
 
 // create Clear Button
 let btn = document.createElement('button');
@@ -28,28 +22,22 @@ for (let i = 0; i < colors.length; i++){
     newDiv.addEventListener('click', choose) // add attribute to execute "choose" function on click
     newDiv.style.backgroundColor = colors[i];
     sidebar.appendChild(newDiv)
-    
 }
-
+let colorSafe = null;
 function choose (event){
-    console.log(event.target.style.backgroundColor); // selects the color 
-    let colorSafe = event.target.style.backgroundColor;
+    console.log(event.target.style.backgroundColor); // selects the color
+    colorSafe = event.target.style.backgroundColor;
 }
-
-
-
-
 
 // create colorgrid divs
 let colorgrid = document.getElementById('colorgrid')
 
-    for (let i = 0; i < 4500 ; i++){
-        let newDiv = document.createElement('div');
-        colorgrid.appendChild(newDiv)
-        newDiv.className = 'grid';
-        newDiv.addEventListener('mousedown', paint)
-        newDiv.addEventListener('mousover', paint)// add attribute to execute "color" function on click
-
+for (let i = 0; i < 6000 ; i++){
+    let newDiv = document.createElement('div');
+    colorgrid.appendChild(newDiv)
+    newDiv.className = 'grid';
+    newDiv.addEventListener('mousedown', paint)
+    newDiv.addEventListener('mouseover', paintdrag)// add attribute to execute "color" function on click
 }
 
 
@@ -79,10 +67,14 @@ body.addEventListener("mouseup", function(){
 }); // checks for boolean of mouse down status
 
 
-    function paint (event){
-        console.log(event)
-    }
-
-
-
-
+function paint (event){
+   if(colorSafe!=null ){
+     event.target.style.backgroundColor = colorSafe;
+   }
+}
+function paintdrag (event){
+  console.log(event);
+   if (mousedown && colorSafe != null) {
+     event.target.style.backgroundColor = colorSafe;
+   }
+}
