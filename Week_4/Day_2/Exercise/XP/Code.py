@@ -130,3 +130,56 @@ for a in range (0, len(ticketPrice)):
     final += ticketPrice[i]
 
 print(f'Your final price is ${ticketPrice}')
+
+
+#EXERCISE 13
+user = []
+
+amount = int(input('How many people? '))
+
+for b in range (0, identifier):
+    user_age = int(input('What is your age? '))
+    user.append(user_age)
+
+print(users)
+
+new_list = []
+
+for c in range (0, amount):
+    if user[b] <= 16:
+        continue
+    else:
+        new_list.append(user[b])
+
+print(new_list)
+
+
+#EXERCISE 14
+
+family_list = []
+
+while True:
+    print("1. Name \n 2. Remove existing name \n 3. View Family Members \n 4. Exit")
+
+    c = int(input('Choose your option 1. 2. 3. or 4.'))
+    if c <1 and x >4:
+        c = int(input('Choose your option 1. 2. 3. or 4.'))
+    elif c == 1:
+        newName = input('Add your name: ')
+        family_list.append(newName)
+    elif c == 2:
+        removeName = input('Which name should be removed? ')
+        if no family_list:
+            print('No names inside')
+            break
+        else:
+            family_list.remove(removeName)
+    elif c == 3:
+        family_list = ', '.join(family_list)
+        print(f'These names are currently in the list: {family_list}')
+    else:
+        break
+    
+
+
+
