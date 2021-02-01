@@ -172,6 +172,25 @@ range(start,stop,step)
 
 #RANGE can ONLY be used in loops
 
+#enumerate() gives index number of each charackter
+for i, char in enumerate('Hello'):
+    print(i, char)
+
+#0 H
+#1 e
+#2 l
+#3 l
+#4 o
+
+for i, nr in enumerate(list(range(100))):
+    if nr == 50:
+        print(f'index of 50 is {i}') #will five index of 50
+
+
+
+
+
+
 
 #WHILE LOOP
 num = 0
@@ -183,8 +202,12 @@ while num < 10:
 
 
 
+== # is something equal to
 
-
+is #used to test if two variables refer to the same object.
+    # eg. x = 'Hello'
+    #     y = x
+    # print(x is y) = True
 
 
 
