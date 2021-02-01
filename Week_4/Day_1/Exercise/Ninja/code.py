@@ -33,19 +33,18 @@ print(len(my_text)) #445 characters
 
 #Exercise 5
 
+length = 0
+
 while True:
     sentence = input('What is the longest sentence you know, without A? ')
 
-length = 0
-
-for i in sentence:
     if 'a' in sentence or 'A' in sentence:
-        print('There was an A!')
+        print:('Oops, there was an A!')
     
     elif len(sentence)<length:
         print(f'The sentence was shorter than {length} charackters')
     
     else:
-        longest = len(sentence)
+        length = len(sentence)
         print(f'Well done, your sentence is {length} charecters long')
     
