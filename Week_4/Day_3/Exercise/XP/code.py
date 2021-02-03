@@ -49,7 +49,9 @@ brand = {
 brand["number_stores"] = 2
 
 #part 3
-#?
+for customer in brand['type_of_clothes'][:3] #start at beginning at start of list stopping at index 3 (to get kinds in list)
+print('The clients of Zara are', ','.join(brand['type_of_clothes'][:3]))
+
 
 #part 4
 brand['country_creation '] = 'Spain'

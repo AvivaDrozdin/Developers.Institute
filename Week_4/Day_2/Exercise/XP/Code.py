@@ -109,7 +109,7 @@ print(f'Your got following items on your pizzs {toppingList}. \n The total is ${
 
 
 #EXERCISE 12
-people = input('How many people? ')
+people = int(input('How many people? '))
 peopleAge = []
 prices = [0, 10, 15]
 ticketPrice = []
@@ -127,7 +127,7 @@ for z in range (0, people):
 
 final = 0
 for a in range (0, len(ticketPrice)):
-    final += ticketPrice[i]
+    final += ticketPrice[z]
 
 print(f'Your final price is ${ticketPrice}')
 

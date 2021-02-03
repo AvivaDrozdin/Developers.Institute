@@ -63,7 +63,7 @@ for j in range (0, len(words)):
 
 #EXERCISE 6
 
-million = []
+million = [] # we want to create list - empty for now
 
 for i in range(1, 1000001):
     million.append(i)
@@ -73,3 +73,6 @@ print(million)
 print(min(million))
 print(max(million))
 print(sum(million))
+
+#ex 6 - LIST COMPREHENSION
+million = [i for i in range(1, 1000001)] #makes loop run in the list
