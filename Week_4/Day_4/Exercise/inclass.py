@@ -12,8 +12,8 @@ def oldest(myAge, friendAge):
 
 # 2. Create a function that takes 2 words
 # It must return the lenght of the longer word
-def longest(word1, word2):
-    if len(word1) < len(word2):
+def longest_length(word1, word2):
+    return max(len(word1), len(word2)) #return max of len of word 1 or 2
         
 
 
@@ -28,3 +28,22 @@ def maximum(numbers):  #defining function called maximum with parameter(numbers)
 nr_list = [4, -20, 95, -15, -2]
 
 print(maximum(nr_list))
+
+# 4. Create a function that makes a list as an argument 
+# the list should ontain any nr of entries
+# each entry should have a name and grade
+# return the name of the person with the highest grade
+
+students = [
+    {'Name': 'Adam', 'Grade' : 80},
+    {'Name': 'Bob', 'Grade': 72},
+    {'Name': 'Charlie', 'Grade': 81}
+]
+
+def top_student(students):
+    top = students[0]
+    for student in students:
+        if student['grade'] > top['grade']:
+            top = student
+            
+    return biggest
