@@ -39,10 +39,13 @@ class Farm:
     
     #prints out name of farm + type of animal with amount + EIEIO
     def get_info(self):
-        print(f'{self.name}s Zoo ') #print zoo name
-        for item in self.zoo_dict: #for each animal in zoo dict
-            print(f'{item[0]} : {item[1]}') #print out key(animal) : value(amount)
-        print('E-I-E-I-O')
+        print(f'{self.name}s Zoo \n') #print zoo name
+        for animal_name, animal_amount in self.zoo_dict: #for each animal in zoo dict
+            print(f'{animal_name} : {animal_amount}') #print out key(animal) : value(amount)
+        print(' \n E-I-E-I-O')
+
+
+
 
 #Expand the farm
     def get_animal_types(self):

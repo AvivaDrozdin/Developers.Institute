@@ -4,6 +4,7 @@ def insert_word():
     position = int(input('Where would you like to add it? '))
     my_list.insert(position, item) #WHY only this way round??
 
+
 my_list = ['Hello', 'friend']
 print(my_list)
 insert_word()
