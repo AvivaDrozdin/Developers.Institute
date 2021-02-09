@@ -1,5 +1,4 @@
 #EX 1
-
 class Pets():
     animals = []
     def __init__(self, animals):
@@ -44,29 +43,15 @@ my_pets = Pets(my_cats)
 my_pets.walk()
 
 
+#EX 3 in dogcont.py
 
-
-
-#EX 2 
-
-#1. Create a class named Dog with the attributes name, age, weight
-from dog import Dog 
-
-if __name__ == '__main__':
-
-
-
-d1 = Dog('Butch', 6, 45) #self.
-d2 = Dog('Fifi', 5, 3) #other_dog = parameter in fight
-
-# 3. Create 3 dogs and use some of your methods
-
-d3 = Dog('Monty', 5, 3)
-d4 = Dog('Tyson', 7, 54)
-d5 = Dog('Bobby', 2, 1)
-
-
-#EX 3
+#EX 4
+class Family:
+    def __init__(self, members, last_name):
+        self.members = members
+        self.last_name = last_name
+    
+    
 
 
 
