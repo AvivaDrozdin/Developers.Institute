@@ -1,0 +1,81 @@
+DATABASES: PostgreSQL
+
+Currently - once we shut off computer all data disapears.
+With database we can save our functions, variables etc.
+
+
+How to Databases work?
+
+Relational Database:
+
+Non-Relational Database:
+It uses a structure that allows us to identify and access data in relation to another piece of data in the database
+
+
+Use SQL (SQL = Structured  Query Language)
+
+
+Example Excel:
+
+(column:    column:      .       .)
+people:
+id        name        lname       age  (row / record)
+1         bob         bobson      24
+
+USE SELECT BEFORE ANYTHING TO ENSURE NO MISTAKES / OVERWRITING
+= Exact math
+LIKE with wildcard = Similar to .. that has anything after/before/between % (%something)
+
+
+CRUD:
+Create  - (Insert) - insert cell / row
+INSERT INTO <table> (<columns>) VALUES (<values>)
+
+INSERT INTO people (fname, lname, age) VALUES ('Dave', 'Davidson', 45);
+[INSERT INTO people (id, fname, lname, age)... (if we control ID, for now leave it!!!!)]
+
+
+
+
+Retrieve - (Select) - select cell / row
+SELECT <column> FROM <table>; (or)
+SELECT <column> FROM <table> WHERE <condition>;
+
+SELECT: fname, lname FROM people; (select fname and lname from people table)
+SELECT * FROM people; (selects all columns from people table)
+SELECT * FROM people WHERE age >=25; (selects all people where age is smaller or 25)
+SELECT * FROM people WHERE fname LIKE 'bo%' (Like = finds name that are simmilar or like bo)
+
+
+
+
+Update  - (Update) - update
+UPDATE <table> SET <column> = <value> WHERE <condition>;
+
+UPDATE people SET fname = 'Robert' WHERE id=1
+
+
+
+
+Delete  - (Delete) - delete
+DELETE FROM <table> WHERE <condition> (CAN'T DELETE ONE CELL - DELETES ENTIRE ROW / RECORD)
+DELETE FROM people WHERE fname = 'Bob' (deletes all rows with bob)
+
+
+
+LIMIT = When showing the table, limit to x amount of results
+OFFSET = When showing the table, skip x amount and show remaining results
+
+
+
+
+
+HOW DO DATABASES STORE NULL?
+null - if there is no value, database stores it as null
+
+
+
+
+
+
+EMPTY DATABASE (pgAdmin)
