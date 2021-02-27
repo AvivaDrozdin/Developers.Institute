@@ -1,0 +1,13 @@
+def missing_char(str, n): 
+  str1 = str[:n] #we want to slive of at the end with nr n
+  str2 = str[n+1:] # and beginning n+1 (so it takes the letter after, since we don't know n)
+  return str1 + str2 #concat
+
+
+def front_back(str):
+  if len(str) <= 1:
+    return str
+  return str[-1] + str[1:-1] + str [0] 
+        #last letter + take middle part (starting at 0 and ending at -1) + first letter
+
+        
