@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+
+
+{% block content %}
+<ul> 
+    {%for animal in content%}
+    <h3>{{animal.name.upper}}</h3>
+    <li>Legs: {{animal.legs}}</li>
+    <li>Weight: {{animal.weight}}</li>
+    <li>Heigh: {{animal.height}}</li>
+    <li>Maximum Speed: {{animal.max_speed}}</li>
+    <li>Family: {{animal.family.name}}</li>
+
+    {%endfor%}
+</ul>      
+
+{% endblock %}
+
+{% block title%}
+<title>
+    Family
+</title>
+{%endblock%}

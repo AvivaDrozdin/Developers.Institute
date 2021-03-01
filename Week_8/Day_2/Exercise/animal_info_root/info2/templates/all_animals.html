@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+
+{% block content%}
+<h1 style='margin-left: 20px; color: rebeccapurple;'>All Animals:</h1>
+<ul style= 'list-style: square;'>
+    {%for animal in content%}
+    <li>{{animal.name}}</li>
+    {%endfor%}
+</ul >
+{%endblock%}
+
+
+{% block title%}
+<title>
+    All Animals 
+</title>
+{%endblock%}
