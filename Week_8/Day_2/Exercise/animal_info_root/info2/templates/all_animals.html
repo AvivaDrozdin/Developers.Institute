@@ -5,7 +5,8 @@
 <h1 style='margin-left: 20px; color: rebeccapurple;'>All Animals:</h1>
 <ul style= 'list-style: square;'>
     {%for animal in content%}
-    <li>{{animal.name}}</li>
+
+    <a href="{% url 'animals' animals.id %}"><li>{{animal.name}}</li></a>
     {%endfor%}
 </ul >
 {%endblock%}

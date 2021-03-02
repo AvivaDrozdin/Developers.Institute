@@ -21,7 +21,11 @@ def animals(request, id):
 
 def all_animals(request):
     all_animals = Animals.objects.all()
-    link = f'../animal/'
+    # link = str(f'../animal/{all_animals[i].id}')
+    # for i in range(len(all_animals)):
+    #     all_animals[i].link = str(f'../animal/{all_animals[i].id}')
+    
+
     context = {
         'content':all_animals
     }
