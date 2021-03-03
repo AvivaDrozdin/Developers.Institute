@@ -2,6 +2,14 @@
 
 {% block content %}
 
+{% for item in poli %}
+<div style="direction: flex; flex-wrap: wrap; justify-content: space-around;">
+    <div>
+        <img src="{{item.url}}" alt="">
+    </div>
+</div>
+{% endfor %}
+
 
 {% endblock %}
 

@@ -16,7 +16,7 @@ class Gif(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
-    gifs = models.ManyToManyField(Gif) #, related_name='gif'
+    gifs = models.ManyToManyField(Gif) 
 
     def __repr__(self):
         return f'Name, ID: {self.name}, {self.id}'

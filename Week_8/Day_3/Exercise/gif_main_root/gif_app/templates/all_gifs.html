@@ -2,15 +2,17 @@
 
 {% block content %}
 
+{% for item in gifs %}
 
-<!-- {% for item in category.gif_set.all %}
-<div>
-    <a href="{url}"></a>
+<div style="direction: flex; flex-wrap: wrap; justify-content: space-around;">
+    <div>
+        <img src="{{item.url}}" alt="">
+    </div>
 </div>
-<img src="{% url.'all_gifs' %}" alt="">
+
 {% endfor %}
 
- -->
+
 
 {% endblock %}
 
