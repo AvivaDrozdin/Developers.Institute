@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+    {% if cust_add %}
+    <h3>Register</h3>
+    <a href="{% url 'customer' %}" class="btn btn-primary role="button">Back to Customers</a>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="POST">
+                {% csrf_token %}
+                <table class="table table-hover">
+                    {{add_customer.as_table}}
+                </table>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}All Cars{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <h1>All Cars</h1>
+    <div class="row">
+        {% for all in vehicle %}
+        <div class="col-md-3">
+            <table class="table table-hover">
+                <tr>
+                    <th>{{vehicle.name}}</th>
+                </tr>
+                <tr>
+                    <td>
+                        {{v.size}}
+                    </td> 
+                </tr>
+            </table>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

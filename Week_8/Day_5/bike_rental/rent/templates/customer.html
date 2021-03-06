@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Customers{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    {% if customer %}
+    <h1>Customers</h1>
+    <a href="{% url 'add_customer' %}" class="btn btn-primary" role="button">Add new customer</a>
+    <table class="table table-hover">
+        <tr>
+            <th>Last name</th>
+            <th>First name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        {% for customer in customer %}
+        <tr>
+            <td><a href="{% url 'customer_id' customer.id %}">{{customer.lname}}</a></td>
+            <td>{{customer.fname}}</td>
+            <td>{{customer.email}}</td>
+            <td>{{customer.phone}}</td>
+            <td>{{customer.address}}</td>
+            <td>{{customer.city}}</td>
+            <td>{{customer.country}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h1>Customer ID: {{add_customer.id}}</h1>
+    <a href="{% url 'customer' %}" class="btn btn-primary" role="button">Back to customers</a>
+    <table class="table table-hover">
+        <tr>
+            <th>Last name</th>
+            <th>First name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Rental date</th>
+            <th>Return date</th>
+        </tr>
+        <tr>
+            <td>{{one_customer.lname}}</td>
+            <td>{{one_customer.fname}}</td>
+            <td>{{one_customer.email}}</td>
+            <td>{{one_customer.phone}}</td>
+            <td>{{one_customer.address}}</td>
+            <td>{{one_customer.city}}</td>
+            <td>{{one_customer.country}}</td>
+            {% for rental in one_customer.rental_set.all %}
+            <td>{{rental.rental_date}}</td>
+            <td>{{rental.return_date}}</td>
+            {% endfor %}
+        </tr>
+    </table>
+    {% endif %}
+</div>
+{% endblock %}

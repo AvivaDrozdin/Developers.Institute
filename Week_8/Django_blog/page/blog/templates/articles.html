@@ -1,7 +1,12 @@
+{% extends "base.html" %}
+
+{% load static %}
 
 {% block title %}
 <title>Articles</title>
 {% endblock %}
+
+
 
 {% block content %}
 <h1>All Articles</h1>
@@ -9,7 +14,7 @@
 <div class="articles">
     {% for article in content %}
     <div class="article">
-        <h3><a href="#">{{ article.title }}</a></h3>
+        <h3><a href="{% url 'article_detail' article.slug %}">{{ article.title }}</a></h3>
         <p>{{article.snippet}}</p>
         <p>{{article.date}}</p>
     </div>
