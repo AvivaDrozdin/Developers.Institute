@@ -14,7 +14,7 @@ def homepage(request):
 
 class AddFilm(CreateView):
     form_class = AddFilmForm
-    template_name = 'film/add_film.html'
+    template_name = 'add_film.html'
     success_url = reverse_lazy('homepage')
 
 class AddDirector(CreateView):
