@@ -9,7 +9,11 @@ from django.urls import reverse_lazy
 # Create your views here.
 
 def homepage(request):
-    return render (request, "homepage.html")
+    films = Film.objects.all()
+    context = {
+        'films':films,
+    }
+    return render(request, 'homepage.html', context)
 
 
 class AddFilm(CreateView):
