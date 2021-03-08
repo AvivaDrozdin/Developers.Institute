@@ -16,7 +16,7 @@
             <h4 class="card-title"> {{film.title}}, directed by: 
 
                 {% for director in film.director.all %}
-                {{name.first_name}} {{name.last_name}}
+                {{director.first_name}} {{director.last_name}}
                 {% endfor %}
         
             </h4>
