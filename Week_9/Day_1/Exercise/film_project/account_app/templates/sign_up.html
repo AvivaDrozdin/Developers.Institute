@@ -1,0 +1,22 @@
+{% extends "partials/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block content %}
+{% include "partials/navbar.html"%}
+
+<div class="container-fluid d-flex  align-self-center">
+    <form action="" method="POST">
+        <br>
+        <h3>Sign Up!</h3>
+        {% csrf_token %}
+        {{ form|crispy}}
+        <br>
+        <button class="btn btn-secondary">Register</button>
+    </form>
+</div>
+
+{% endblock %}

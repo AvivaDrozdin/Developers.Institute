@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from django.contrib.auth.decorators import #login_required #cheating way
+from django.contrib.auth.decorators import login_required #cheating way
 
 urlpatterns = [
     path('homepage/', views.homepage, name='homepage'),

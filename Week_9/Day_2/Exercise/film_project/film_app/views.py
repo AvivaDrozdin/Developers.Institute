@@ -10,6 +10,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin  #<- proper way
 
 # Create your views here.
 
+                    #mixins always come before view
+class LoginCreateView(LoginRequiredMixin, CreateView): #create own class to require login
+    pass
 
 def homepage(request):
     films = Film.objects.all()
