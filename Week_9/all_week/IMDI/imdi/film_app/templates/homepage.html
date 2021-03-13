@@ -1,0 +1,44 @@
+{% extends 'partials/base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %} 
+{% include 'partials/navbar.html' %}
+
+<div class="container-fluid">
+    <h1>All movies</h1>
+    <div class="container-fluid">
+        <div class="row">
+            {% for film in films %}
+            <div class="col-md-4">
+                <div class="card-body">
+                    <h4 class="card-title"> {{film.title}} </h4>
+                    <h5 class="card-title">
+                        {% for director in film.director.all %}
+                         Directed By: {{director.fname}} {{director.lname}}
+                        {% endfor %} 
+                    </h5>
+
+                    <p class="card-text"> Release Date: {{film.release_date}}</p>
+                    <p class="card-text">Genre:
+                        {% for category in film.category.all %}
+                            {{category}}
+                        {% endfor %}
+                    </p>
+                    <p class="card-text">Available in:
+                        {% for country in film.available_in_countries.all %}
+                        <ul>
+                            <li>
+                            {{country}}
+                            </li>
+                        </ul>
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div> 
+</div>
+
+{% endblock %} 

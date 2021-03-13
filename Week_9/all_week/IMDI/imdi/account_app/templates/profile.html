@@ -1,0 +1,63 @@
+{% extends 'partials/account_base.html' %}
+
+{% block title %} Profile {% endblock %}
+
+{% block content %}
+{% include 'partials/account_navbar.html' %}
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+              <div class="d-flex flex-column align-items-center text-center">
+                  <h4>Welcome: </h4>
+                  <h4>{{user_profile.get_full_name}}</h4>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6>First Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{user_profile.first_name}}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6>Last Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{user_profile.last_name}}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6>Username</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{user_profile.username}}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6>Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{user_profile.email}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

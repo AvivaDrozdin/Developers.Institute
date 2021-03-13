@@ -1,0 +1,23 @@
+{% extends 'partials/account_base.html' %}
+
+{% block title %} Add Film {% endblock %}
+
+{% block content %}
+{% include 'partials/account_navbar.html' %}
+
+<div class="container-fluid">
+    <h1>Sign Up</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <table class="table table-hover align-middle">
+            {{form.as_table}}
+        </table>
+        <button type="submit" class="btn btn-lg btn-secondary">Submit</button>
+        <br>
+        Got an account alread? <a href="{% url 'login'%}" target="blank"><strong>Login</strong></a> instead.
+    </form>
+
+</div>
+
+{% endblock %}
