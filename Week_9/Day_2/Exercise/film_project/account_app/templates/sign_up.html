@@ -2,21 +2,23 @@
 {% load crispy_forms_tags %}
 
 {% block title %}
-Signup
+Register now!
 {% endblock %}
 
 {% block content %}
 {% include "partials/navbar.html"%}
 
-<div class="container-fluid d-flex  align-self-center">
-    <form action="" method="POST">
-        <br>
-        <h3>Log In</h3>
-        {% csrf_token %}
-        {{ form|crispy}}
-        <br>
-        <button class="btn btn-secondary">Sign Up</button>
-    </form>
+<div class="container-fluid">
+    <div class="d-flex justify-content-between">
+        <form action="" method="POST">
+            <br>
+            <h3>Sign Up</h3>
+            {% csrf_token %}
+            {{ form|crispy}}
+            <button class='btn btn-secondary'>Register</button>
+        </form>
+    </div>    
+    </div>
 </div>
 
 {% endblock %}
