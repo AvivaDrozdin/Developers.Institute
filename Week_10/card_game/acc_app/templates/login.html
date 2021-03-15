@@ -1,0 +1,22 @@
+{% extends "partials/acc_base.html" %}
+
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+{% include "partials/acc_navbar.html"%}
+
+<div class="container-fluid d-flex  justify-content-center">
+    <form action="" method="POST">
+        <br>
+        <h3>Log In</h3>
+        {% csrf_token %}
+        {{ form.as_p}}
+        <br>
+        <button class="btn btn-secondary">Login</button>
+    </form>
+</div>
+
+{% endblock %}
