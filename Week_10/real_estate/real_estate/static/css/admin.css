@@ -16,3 +16,8 @@ a:visited{
 div.bradcrumbs {
     background: #30caa0
 }
+
+.module h2, .module caption, .inline-group h2 {
+    background: #30caa0;
+}
+
