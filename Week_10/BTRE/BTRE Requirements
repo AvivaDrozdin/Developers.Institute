@@ -1,0 +1,54 @@
+BT Real Estat Requirements
+
+--FRONTENT--
+- Home	
+- About
+- Listings
+- Single Listings
+- Search
+- Register
+- Login
+- Dashboard (inquiries)
+
+
+--DESIGN SPECS--
+- Use BTRE Logo (Frontend & Admin)
+- Brand colors (blue #10284c / green #30caa0)
+- Mobile Friendly
+- Social Media icons & contact info
+- Clean design
+
+
+--FUNCTIONALITY--
+- Manage listings, realtors, contact inquiries and website users via admin
+- Role based user (staff and non-staff)
+- Display listings in app with pagination
+- Ability to set listings to unpublished
+- Search listing by keyword, city, state, bedrooms and prive (Homepage & search page)
+- List realtors on about page with 'Seller of the month' (control via admin)
+- Listing page should have fields listed below*
+- listing page should have 5-6 img with lighbox
+- Lightbox should scroll through images
+- Listintgs page should have a form to submit inquirey for property listing
+- Form info should go to database and notify realtors with an email
+- Frontend register/login to track inquiries
+- Both registered and unregistered users can submit form. If user is registered, can only submit one / listing
+
+
+*--LISTING PAGE FIELDS--
+
+- Title
+- Address, city, state, zip
+- Price
+- Bedrooms
+- Bathrooms
+- Square Feet
+- Lot Size
+- Garage
+- Listing date
+- Realtor (Name & Img)
+- Main image + 5 other images
+
+
+
+
