@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %} Profile {% endblock %}
+
+{% block content %}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+              <div class="d-flex flex-column align-items-center text-center">
+                  <h4>Welcome: </h4>
+                  <h4>Username</h4>
+              </div>
+            </div>
+        </div>
+        <div class="editprofile">
+            <button class="btn btn-secondary btn-block editbutton"><a href="{% url 'edit_profile' %}"> Edit Profile</a></button>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6>First Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {firstname}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6>Last Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {lastname}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6>Username</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {username}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6>Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {email}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

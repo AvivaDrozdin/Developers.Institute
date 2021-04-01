@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+<section>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto py-4 px-0">
+            <div class="card p-0">
+                <div class="card-title text-center">
+                    <h5 class="mt-5">LOG IN</h5> <small class="para">Continue your learning journey.</small>
+                </div>
+
+                <form action="{% url 'login' %}" method="POST">
+                  {% csrf_token %}
+
+                  {% for field in form %}
+                      <div class="form-group ">
+                        {{field}}
+                      </div>
+                      
+                  {% endfor %}
+                  <input type="submit" value="Login" class="btn btn-secondary btn-block">
+                  <div class="card-title text-center">
+                    <p class="text-center">Not registered yet? <a  class="registernow" href="{% url 'register' %}">Sign up Now!</a></p>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+{% endblock %}

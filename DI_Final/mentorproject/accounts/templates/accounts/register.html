@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Register {% endblock %}
+
+{% block content %}
+<section>
+  <section>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6 mx-auto py-4 px-0">
+              <div class="card p-0">
+                  <div class="card-title text-center">
+                      <h5 class="mt-5">Register Now</h5> <small class="para">Join our amazing community.</small>
+                  </div>
+  
+                  <form action="{% url 'register' %}" method="POST">
+                    {% csrf_token %}
+                    {% if form.error %}
+                      {% for error in form.error %}
+                        {{error}}
+                      {% endfor %}
+                    {% endif %}
+                      {% for field in form %}
+                        <div class="form-group ">
+                          {{field}}
+                        </div>
+                      {% endfor %}
+  
+
+                    <input type="submit" value="Register" class="btn btn-secondary btn-block">
+                    <p class="text-center">Got an account already? <a  class="loginnow" href="{% url 'login' %}">Login here!</a></p>
+                  </form>
+              </div>
+          </div>
+      </div>
+    </div>
+</section>
+{% endblock %}
+
