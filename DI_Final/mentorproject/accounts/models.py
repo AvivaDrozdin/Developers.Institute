@@ -13,10 +13,19 @@ class Profile(models.Model):
     ('ESP', 'Spanish'),
     ('FRE', 'Français'),
     ]
+    DISTRICT_CHOICES = [
+    ('online', 'Online'),
+    ('tlv', 'Tel Aviv District'),
+    ('central', 'Central District'),
+    ('jerusalem', 'Jerusalem District'),
+    ('haifa', 'Haifa District'),
+    ('north', 'Northern District'),
+    ('south', 'Southern District'),
+    ]
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_type = models.ForeignKey('ProfileType', on_delete=models.PROTECT)
     image = models.ImageField(upload_to='photos/%Y/%m/%d/')
-    location =  models.ForeignKey('Location', on_delete=models.DO_NOTHING)
+    location = models.CharField(max_length=20, choices=DISTRICT_CHOICES)
     company = models.CharField(max_length=100, blank=True)
     github = models.URLField(null=True, blank=True)
     linkedin = models.URLField(null=True, blank=True)
@@ -31,18 +40,7 @@ class Skill(models.Model):
     name = models.CharField(max_length=100)
 
 
-class Location(models.Model):
-    DISTRICT_CHOICES = [
-    ('online', 'Online'),
-    ('tlv', 'Tel Aviv District'),
-    ('central', 'Central District'),
-    ('jerusalem', 'Jerusalem District'),
-    ('haifa', 'Haifa District'),
-    ('north', 'Northern District'),
-    ('south', 'Southern District'),
-    ]
-    name = models.CharField(max_length=20, choices=DISTRICT_CHOICES)
-
+# make language model
 
 
 class ProfileType(models.Model):

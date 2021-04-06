@@ -34,6 +34,15 @@ input {
     letter-spacing: 1px
 }
 
+#id_profiletype {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    border: 1px solid #5F38CB;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, .075);
+    letter-spacing: 1px
+}
 
 .btn {
     display: block;

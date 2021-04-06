@@ -1,0 +1,36 @@
+body {
+    margin: auto 0px;
+}
+
+legend {
+    color: red;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.form-select {
+    width: 15rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.input-field{
+    display: flex;
+    justify-content: space-around;
+
+} 
+
+.skill-input{
+    justify-content: space-around;
+    margin: auto;
+    width: 55rem;
+} 

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Search {% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/specific.css' %}">
+<div class="searchform">
+  <form action="">
+    <fieldset>
+      <legend>LOOKING FOR A TEACHER</legend>
+      <div class="search-form">
+        <div class="inner-form">
+          <select class="form-select loc-select" aria-label="loc-select">
+            <option value="" selected disabled> Location </option>
+            <option value="tlv">TLV</option>
+            <option value="jer">JER</option>
+            <option value="haif">HAIF</option>
+          </select>
+          <select class="form-select lang-select" aria-label="lang-select">
+            <option value="" selected disabled> Spoken Language </option>
+            <option value="heb">Heb</option>
+            <option value="eng">Eng</option>
+            <option value="rus">Rus </option>
+          </select>
+        </div>
+        <div class="input-field">
+          <input class="form-control skill-input" id="choices-text-preset-values" type="text" placeholder="Type to search skills..." required />
+          <button class="btn-search" type="button"> Search </button>
+          <button class="btn-reset" type="reset" value="Reset"> Reset </button>
+          <!-- <div class="suggestion-wrap">
+            <span>Django </span>
+            <span>JavaScript </span>
+            <span>Python </span>
+            <span>Java </span>
+            <span>Kotlin </span>
+          </div> -->
+        </div>
+      </div>
+    </fieldset>
+  </form> 
+</div>
+
+{% endblock %}  

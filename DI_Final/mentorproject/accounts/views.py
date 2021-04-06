@@ -3,7 +3,7 @@ from django.contrib import messages, auth
 from django.contrib.auth.models import User
 from .forms import RegisterForm, LoginForm
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from dal import autocomplete
 
@@ -22,17 +22,21 @@ def register_view(request):
 
 
 
-def login_view(request):
-    if request.method == 'POST':
-        form = LoginForm(data=request.POST)
-        if form.is_valid():
-            return redirect('dashboard')
-    else:
-        form = LoginForm()
-        context = {
-            'form': form
-        }
-        return render(request, 'accounts/login.html', context)
+# def login_view(request):  --------> Notes: Login in urls now! 
+#     if request.method == 'POST':
+#         form = LoginForm(data=request.POST)
+#         if form.is_valid():
+#             login(request, form.user_cache)
+
+#             print('login form is valid')
+#             return redirect('dashboard')
+#     else:
+#         form = LoginForm()
+#         context = {
+#             'form': form
+#         }
+#         return render(request, 'accounts/login.html', context)
+
 
 @login_required
 def logout_view(request):
