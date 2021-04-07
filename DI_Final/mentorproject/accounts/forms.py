@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import password_validation
 from django import forms
 from dal import autocomplete
-from .models import Profile, ProfileType
+from .models import *
 
 
 class RegisterForm(UserCreationForm):
@@ -52,7 +52,19 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         fields = '__all__'
         widgets = {
+            'profile_type': forms.Select(attrs={'class': 'form-control'}),
+            'skills_have':autocomplete.ModelSelect2Multiple(url='skill-autocomplete', attrs={'class': 'form-control'}),
+            'skills_wanted':autocomplete.ModelSelect2Multiple(url='skill-autocomplete', attrs={'class': 'form-control'} ),
+        }
+
+
+class AutocompleteProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['profile_type', 'location', 'human_language', 'skills_have', 'skills_wanted']
+        widgets = {
             'skills_have':autocomplete.ModelSelect2Multiple(url='skill-autocomplete'),
+            'skills_wanted':autocomplete.ModelSelect2Multiple(url='skill-autocomplete'),
         }
 
 

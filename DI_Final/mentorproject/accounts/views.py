@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
-from .forms import RegisterForm, LoginForm
+from .forms import RegisterForm, LoginForm, ProfileForm
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from dal import autocomplete
+from .models import Skill
+
 
 # Create your views here.
 
@@ -52,7 +54,8 @@ def dashboard_view(request):
 
 @login_required
 def edit_profile(request):
-    return render(request, 'accounts/edit_profile.html')
+    form = ProfileForm(instance=request.user.profile)
+    return render(request, 'accounts/edit_profile.html', {'form': form})
 
 
 class SkillAutocomplete(autocomplete.Select2QuerySetView):

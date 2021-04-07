@@ -6,3 +6,5 @@ from .models import *
 admin.site.register(Profile)
 admin.site.register(ProfileType)
 admin.site.register(Skill)
+admin.site.register(Location)
+admin.site.register(HumanLanguage)

@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'accounts',
     'main',
     'search',
-    'django_filters',
 ]
 
 MIDDLEWARE = [
